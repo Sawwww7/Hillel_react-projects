@@ -1,10 +1,7 @@
-//import { useState } from "react";
 import Button from "../UI/Button/Button";
 import "./counter.css";
 
 const Counter = ({ count, setCount }) => {
-  //const [count, setCount] = useState(0);
-
   const handleClickDecrementButton = () => {
     setCount(count - 1);
   };
@@ -20,7 +17,7 @@ const Counter = ({ count, setCount }) => {
       >
         -
       </Button>
-      <span>{count}</span>
+      <span> {count} </span>
       <Button
         className={"counter_button"}
         onClick={handleClickIncrementButton}
