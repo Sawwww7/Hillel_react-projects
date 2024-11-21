@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Button from "../UI/Buttom/Button";
+import Button from "../UI/Button/Button";
 import Counter from "../Counter/Counter";
 
 const MenuItem = ({ pizza }) => {
