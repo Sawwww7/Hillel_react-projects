@@ -1,0 +1,26 @@
+.header {
+  background-color: #fdb913;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: monospace;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.search-bar {
+  background-color: #ffe084;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  width: 300px;
+  font-style: italic;
+}
+
+.username {
+  font-weight: bold;
+}
