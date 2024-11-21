@@ -8,6 +8,7 @@ const Input = ({
   setYourFullName,
 }) => {
   const handleChangeInput = (event) => {
+    console.log(event.target.value);
     setYourFullName(event.target.value);
   };
   return (
