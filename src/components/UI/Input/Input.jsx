@@ -5,10 +5,10 @@ const Input = ({
   placeholder,
   aria_label,
   value,
-  setYourFullName,
+  setInputValue,
 }) => {
   const handleChangeInput = (event) => {
-    setYourFullName(event.target.value);
+    setInputValue(event.target.value);
   };
 
   const handleClickInput = (event) => {

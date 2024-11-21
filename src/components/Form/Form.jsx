@@ -18,7 +18,7 @@ const Form = ({ handleFormVisible }) => {
         placeholder={"Your full name"}
         aria_label={"Your full name"}
         value={yourFullName}
-        setYourFullName={setYourFullName}
+        setInputValue={setYourFullName}
       />
       <Button className={"btn"} onClick={handleFormVisible}>
         Start Order
