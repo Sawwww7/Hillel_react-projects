@@ -1,11 +1,23 @@
 import "./input.css";
-const Input = ({ type, className, placeholder, aria_label }) => {
+const Input = ({
+  type,
+  className,
+  placeholder,
+  aria_label,
+  value,
+  setYourFullName,
+}) => {
+  const handleChangeInput = (event) => {
+    setYourFullName(event.target.value);
+  };
   return (
     <input
-      className={className}
       type={type}
+      className={className}
       placeholder={placeholder}
       aria-label={aria_label}
+      value={value}
+      onChange={handleChangeInput}
     />
   );
 };

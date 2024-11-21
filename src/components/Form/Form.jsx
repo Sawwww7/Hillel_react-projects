@@ -1,6 +1,10 @@
-import Input from "./Input/Input";
-import Button from "./Buttom/Button";
-const Form = () => {
+import { useState } from "react";
+import Input from "../UI/Input/Input";
+import Button from "../UI/Button/Button";
+
+const Form = ({ handleFormVisible }) => {
+  const [yourFullName, setYourFullName] = useState("");
+
   return (
     <div className="main">
       <h1>The best pizza.</h1>
@@ -13,8 +17,12 @@ const Form = () => {
         className={"input"}
         placeholder={"Your full name"}
         aria_label={"Your full name"}
+        value={yourFullName}
+        setYourFullName={setYourFullName}
       />
-      <Button className={"btn"}>Start Order</Button>
+      <Button className={"btn"} onClick={handleFormVisible}>
+        Start Order
+      </Button>
     </div>
   );
 };
