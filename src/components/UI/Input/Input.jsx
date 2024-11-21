@@ -11,6 +11,11 @@ const Input = ({
     console.log(event.target.value);
     setYourFullName(event.target.value);
   };
+
+  const handleClickInput = (event) => {
+    console.log(event.target.value);
+  };
+
   return (
     <input
       type={type}
@@ -19,6 +24,7 @@ const Input = ({
       aria-label={aria_label}
       value={value}
       onChange={handleChangeInput}
+      onClick={handleClickInput}
     />
   );
 };
