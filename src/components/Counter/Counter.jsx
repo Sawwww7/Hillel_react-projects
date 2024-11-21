@@ -3,10 +3,10 @@ import "./counter.css";
 
 const Counter = ({ count, setCount }) => {
   const handleClickDecrementButton = () => {
-    setCount(--count);
+    setCount(count - 1);
   };
   const handleClickIncrementButton = () => {
-    setCount(++count);
+    setCount(count + 1);
   };
   return (
     <div className="counter">
