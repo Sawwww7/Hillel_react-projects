@@ -10,14 +10,17 @@ const Counter = ({ count, setCount }) => {
   };
   return (
     <div className="counter">
-      <Button
-        className={"counter_button"}
-        onClick={handleClickDecrementButton}
-        aria_label={"Decrease quantity"}
-      >
-        -
-      </Button>
+      {count > 0 && (
+        <Button
+          className={"counter_button"}
+          onClick={handleClickDecrementButton}
+          aria_label={"Decrease quantity"}
+        >
+          -
+        </Button>
+      )}
       <span> {count} </span>
+
       <Button
         className={"counter_button"}
         onClick={handleClickIncrementButton}

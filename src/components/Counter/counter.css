@@ -1,4 +1,6 @@
 .counter {
+  display: flex;
+  justify-content: flex-end;
   /*display: none;*/
   align-items: center;
   gap: 0.5rem;
