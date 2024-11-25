@@ -3,8 +3,13 @@ import Button from "../UI/Button/Button";
 import { useState } from "react";
 
 const CartItem = ({ item }) => {
-  const { id, name, price, quantity } = item;
-  const [count, setCount] = useState(0);
+  const { name, price, quantity } = item;
+  const [count, setCount] = useState(quantity || 0);
+
+  const handleDeleteItem = () => {
+    setCount(0);
+  };
+
   return (
     <>
       <span className="quantity-text">{count}x</span>
@@ -15,7 +20,7 @@ const CartItem = ({ item }) => {
 
         <Button
           className={"delete-btn"}
-          //onClick={}
+          onClick={handleDeleteItem}
           aria_label={"Delete item"}
         >
           DELETE
