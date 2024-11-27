@@ -1,8 +1,29 @@
 import "./menu.css";
 import MenuItem from "./MenuItem";
 import Cart from "../Cart/Cart";
+import { useEffect, useState } from "react";
 
-const Menu = ({ pizzas, cartItems }) => {
+const Menu = ({ cartItems }) => {
+  const [pizzas, setPizzas] = useState([]);
+
+  useEffect(() => {
+    const getMenuPizzas = async () => {
+      try {
+        const res = await fetch(
+          "https://react-fast-pizza-api.onrender.com/api/menu"
+        );
+        if (!res.ok) {
+          throw new Error("Failed to fetch");
+        }
+        const data = await res.json();
+        setPizzas(data.data);
+      } catch (e) {
+        console.log(e.message);
+      }
+    };
+    getMenuPizzas();
+  }, []);
+
   return (
     <>
       <Cart cartItems={cartItems} />
