@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Button from "../UI/Button/Button";
-import Counter from "../Counter/Counter";
+import Button from "../../components/UI/Button/Button";
+import Counter from "../../components/Counter/Counter";
 
 const MenuItem = ({ pizza }) => {
   const { id, name, unitPrice, imageUrl, ingredients, soldOut } = pizza;

@@ -1,21 +1,20 @@
-import { useState } from "react";
-import Header from "./components/Header/Header";
-import Form from "./components/Form/Form";
-import Menu from "./components/Menu/Menu";
-import cartItems from "./data/data-order";
 import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import Header from "./components/Header/Header";
+import Main from "./pages/Main/Main";
+import Menu from "./pages/Menu/Menu";
+import Cart from "./pages/Cart/Cart";
+import cartItems from "./data/data-order";
 
 function App() {
-  const [isShowForm, setIsShowForm] = useState(false);
-
-  const handleFormVisible = () => {
-    setIsShowForm(!isShowForm);
-  };
   return (
     <div className="container">
       <Header />
-      {!isShowForm && <Form handleFormVisible={handleFormVisible} />}
-      {isShowForm && <Menu cartItems={cartItems} />}
+      <Routes>
+        <Route path="/*" element={<Main />} />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/basket" element={<Cart cartItems={cartItems} />} />
+      </Routes>
     </div>
   );
 }

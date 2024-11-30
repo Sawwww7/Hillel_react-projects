@@ -1,9 +1,8 @@
 import "./menu.css";
 import MenuItem from "./MenuItem";
-import Cart from "../Cart/Cart";
 import { useEffect, useState } from "react";
 
-const Menu = ({ cartItems }) => {
+const Menu = () => {
   const [pizzas, setPizzas] = useState([]);
 
   useEffect(() => {
@@ -26,7 +25,6 @@ const Menu = ({ cartItems }) => {
 
   return (
     <>
-      <Cart cartItems={cartItems} />
       <div className="menu-container">
         {pizzas.map((pizza) => (
           <MenuItem key={pizza.id} pizza={pizza} />

@@ -1,9 +1,15 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Input from "../UI/Input/Input";
 import Button from "../UI/Button/Button";
 
-const Form = ({ handleFormVisible }) => {
+const Form = () => {
   const [yourFullName, setYourFullName] = useState("");
+
+  const navigate = useNavigate();
+  const handleFormVisible = () => {
+    navigate("/menu");
+  };
 
   return (
     <div className="main">

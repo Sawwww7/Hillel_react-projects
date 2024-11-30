@@ -1,5 +1,5 @@
-import Counter from "../Counter/Counter";
-import Button from "../UI/Button/Button";
+import Counter from "../../components/Counter/Counter";
+import Button from "../../components/UI/Button/Button";
 import { useState } from "react";
 
 const CartItem = ({ item }) => {

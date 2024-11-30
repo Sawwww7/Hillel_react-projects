@@ -1,5 +1,5 @@
 import CartItem from "./CartItem";
-import Button from "../UI/Button/Button";
+import Button from "../../components/UI/Button/Button";
 import "./cart.css";
 
 const Cart = ({ cartItems }) => {

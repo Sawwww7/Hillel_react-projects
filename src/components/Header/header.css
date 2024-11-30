@@ -24,3 +24,18 @@
 .username {
   font-weight: bold;
 }
+
+.heder_link {
+  background-color: #fdb913;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+.heder_link:hover {
+  background-color: #e5a700;
+}
