@@ -1,5 +1,5 @@
 const PageNotFound = () => {
-  return <h1 style={{ textAlign: "center" }}>PageNotFound</h1>;
+  return <h1 style={{ textAlign: "center" }}>Page not found</h1>;
 };
 
 export default PageNotFound;
