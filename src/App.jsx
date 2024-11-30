@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import Main from "./pages/Main/Main";
 import Menu from "./pages/Menu/Menu";
 import Cart from "./pages/Cart/Cart";
+import PageNotFound from "./pages/PageNotFound";
 import cartItems from "./data/data-order";
 
 function App() {
@@ -11,9 +12,10 @@ function App() {
     <div className="container">
       <Header />
       <Routes>
-        <Route path="/*" element={<Main />} />
+        <Route path="/" element={<Main />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/basket" element={<Cart cartItems={cartItems} />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </div>
   );
