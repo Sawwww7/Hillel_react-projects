@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./header.css";
 import Input from "../UI/Input/Input";
-
 import { Link } from "react-router-dom";
+import { NameContext } from "../../App";
 
 const Header = () => {
+  const { userName } = useContext(NameContext);
   const [yourSearchValue, setYourSearchValue] = useState("");
 
   return (
@@ -26,7 +27,7 @@ const Header = () => {
           Basket
         </Link>
       </div>
-      <div className="username">ANDRII</div>
+      <div className="username">{userName}</div>
     </div>
   );
 };

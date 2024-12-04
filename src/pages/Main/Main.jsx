@@ -1,14 +1,20 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import Input from "../../components/UI/Input/Input";
 import Button from "../../components/UI/Button/Button";
+import { NameContext } from "../../App";
 
 const Main = () => {
   const [yourFullName, setYourFullName] = useState("");
+  const { setUserName } = useContext(NameContext);
 
   const navigate = useNavigate();
   const handleFormVisible = () => {
-    navigate("/menu");
+    yourFullName.trim() == ""
+      ? alert("Enter you name")
+      : yourFullName.length < 3
+      ? alert("Please enter your name correctly")
+      : (setUserName(yourFullName), navigate("/menu"));
   };
   return (
     <div className="main">

@@ -1,14 +1,18 @@
+import { useContext } from "react";
 import CartItem from "./CartItem";
 import Button from "../../components/UI/Button/Button";
+import { NameContext } from "../../App";
+import { Link } from "react-router-dom";
 import "./cart.css";
 
 const Cart = ({ cartItems }) => {
+  const { userName } = useContext(NameContext);
   return (
     <div className="cart-container">
-      <a href="#" className="back-link">
+      <Link className="back-link" to="/menu">
         ← Back to menu
-      </a>
-      <h1 className="cart-title">Your cart, Andrii</h1>
+      </Link>
+      <h1 className="cart-title">{`Your cart, ${userName}`}</h1>
 
       <div className="cart-item">
         {cartItems.map((item) => (
